@@ -1,0 +1,134 @@
+@keyframes bounce{
+    0%, 20%, 60%, 100%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    } 
+    40%{
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px)
+    }
+    80%{
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px)
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fundo{
+    background-color: #d3d3d3;
+}
+.slide-container {
+    width: 1080px;
+    height: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-align: center;
+}
+.image-container {
+    width: 3240px;
+    height: 600px;
+    position: relative;
+    transition: left 2s;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;    
+}
+.slider-image {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+.button-container {
+    top: -20px;
+    position: relative;
+}
+.slider-button {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+#slider-image-1:target ~ .image-container{
+    left: 0px;
+}
+#slider-image-2:target ~ .image-container{
+    left: -1080px;
+}
+#slider-image-3:target ~ .image-container{
+    left: -2160px;
+}
+@media screen and (max-width: 400px){
+    .contet{
+        width: 94%;
+    }
+    .table thead{
+        display: none;
+    }
+    .table tbody td{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .content{
+        width: 100%;
+    }
+    .table tbody tr td:nth-child(1){
+        width: 10%;
+    }
+    .table tbody tr td:nth-child(2){
+        width: 10%;
+    }
+    .table tbody tr td:nth-child(3){
+        width: 70%;
+    }
+    .table tbody tr td:nth-child(4){
+        width: 10%;
+    }
+}
+.content{
+    display: flex;
+    margin: auto;
+}
+.table {
+    width: 100%;
+    text-align: center;  
+}
+    .table thead{
+        background: black;
+        font-weight: bold;
+        color: #fff;
+    }
+    .table tbody tr:nth-child(2n){
+        background: #c0c0c0;
+    }
+    .table th , .table td{
+        padding: 7px 0;
+    }
+.btms{
+    text-align: center;
+    align-content: center;
+    width: 100px;
+    height: 40px;
+    background-color: #7d7;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: all 400ms ease;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.efeito1:hover {
+    animation: bounce 1s;
+}
+.efeito2:hover{
+    background: rgba(0,0,0,0);
+    color: #000;
+    box-shadow: inset 0 0 0 3px #000; 
+}
